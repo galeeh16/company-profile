@@ -3,6 +3,8 @@
 
   <HeroSection />
   <LayananSection />
+  <PortfolioSection />
+  <TeknologiSection />
   <ContactSection />
   <Footer />
 
@@ -16,6 +18,8 @@ import {
   HeroSection, 
   LayananSection,
   ContactSection,
+  TeknologiSection,
+  PortfolioSection,
   Footer 
 } from '../components';
 import { onMounted, ref } from 'vue';
@@ -23,7 +27,7 @@ import { onMounted, ref } from 'vue';
 let currentSection = ref('hero');
 
 onMounted(() => {
-  const observer = new IntersectionObserver(entries => {
+  const observer = new IntersectionObserver((entries, observer) => {
       if (entries[0].intersectionRatio <= 0) return;
 
       entries.forEach(entry => {
@@ -31,6 +35,8 @@ onMounted(() => {
         if (entry.isIntersecting > 0) {
           currentSection.value = entry.target.getAttribute('id');
         }
+        // observer.unobserve(entry.target)
+        console.log(window.location.hash)
       });
     },
     {

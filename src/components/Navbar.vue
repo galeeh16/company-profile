@@ -15,8 +15,10 @@
         <ul>
           <li><a class="nav-link scrollto" href="#hero" :class="{ active: currentSection === 'hero'}">Beranda</a></li>
           <li><a class="nav-link scrollto" href="#layanan" :class="{ active: currentSection === 'layanan'}">Layanan</a></li>
+          <li><a class="nav-link scrollto" href="#portfolio" :class="{ active: currentSection === 'portfolio'}">Portfolio</a></li>
+          <li><a class="nav-link scrollto" href="#teknologi" :class="{ active: currentSection === 'teknologi'}">Teknologi</a></li>
           <li><a class="nav-link scrollto" href="#contact" :class="{ active: currentSection === 'contact'}">Kontak Kami</a></li>
-          {{ currentSection}}
+          <!-- {{ currentSection}} -->
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav>
